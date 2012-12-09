@@ -1,7 +1,12 @@
 BiscoitoGlobo::Application.routes.draw do
+  resources :articles
+
+
   get 'frontend/:template' => 'frontend#show'
 
   get 'frontend(/index)' => 'frontend#index'
+
+  get 'articles(/index)' => 'articles#index'
 
   get "frontend/index"
 
